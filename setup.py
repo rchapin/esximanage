@@ -25,9 +25,7 @@ setup(
     python_requires='>=3.6',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=[
-        'fabric3==1.14.post1',
-        ],
+    install_requires=open('requirements.txt').read().splitlines(),
     entry_points={
          'console_scripts': [
              'esximanager=esximanager.main:main',
